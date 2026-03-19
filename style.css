@@ -1,3 +1,4 @@
+
 :root{
   --bg: #f5f3ef;
   --bg-soft: #fbf9f6;
@@ -67,13 +68,67 @@ img{ max-width:100%; display:block; }
 }
 
 .site-header{
-  position:sticky;
-  top:0;
-  z-index:50;
-  backdrop-filter: blur(12px);
-  background: rgba(245,243,239,.9);
+  position: relative;
+}
+
+/* TOP NAVY BAR */
+.header-top{
+  background: #445979;
+  padding: 26px 0 18px;
+  text-align: center;
+}
+
+/* LOGO */
+.brand-logo{
+  width: 400px;
+  max-width: 92vw;
+  margin: 0 auto;
+}
+
+/* BOTTOM TOOLBAR (LIGHT) */
+.header-bottom{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--bg);
   border-bottom: 1px solid var(--line);
 }
+
+/* CENTER NAV */
+.nav-center{
+  display: flex;
+  justify-content: center;
+  padding: 12px 0;
+}
+
+/* MENU */
+.menu{
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+/* NAV LINKS (NOW DARK TEXT) */
+.menu a{
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.menu a:hover{
+  background: rgba(68, 89, 121, 0.06);
+  color: var(--brand);
+  text-decoration: none;
+}
+
+/* WHITE BUTTON LIKE CANVA */
+.nav-cta{
+  background: #fff;
+  color: #445979 !important;
+}
+
+
 
 .nav{
   display:flex;
@@ -86,11 +141,6 @@ img{ max-width:100%; display:block; }
 .brand{
   display:flex;
   align-items:center;
-}
-
-.brand-logo{
-  width:180px;
-  max-width:100%;
 }
 
 .menu{
@@ -607,7 +657,6 @@ input:focus, select:focus, textarea:focus{
   .grid3{ grid-template-columns: 1fr; }
   .grid2{ grid-template-columns: 1fr; }
   .footer-grid{ grid-template-columns: 1fr; }
-  .menu{ display:none; }
 
   .hero-nest{
     width:160px;
@@ -630,4 +679,70 @@ input:focus, select:focus, textarea:focus{
   .hero{ padding-top:54px; }
   .hero-feather{ width:85px; top:66px; left:-8px; }
   .hero-nest{ width:120px; top:150px; }
+}
+
+/* BACKGROUND ART SYSTEM */
+.bg-art{
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* FEATHER VARIATIONS */
+.feather-1{
+  top: 10%;
+  left: 0px;
+  width: 120px;
+}
+
+.feather-2{
+  bottom: 10%;
+  right: -30px;
+  width: 110px;
+}
+
+.feather-3{
+  top: 40%;
+  right: 10%;
+  width: 90px;
+}
+
+.feather-4{
+  top: 10%;
+  right: 200px;
+  width: 90px;
+}
+
+/* NEST VARIATIONS */
+.nest-1{
+  top: 8%;
+  right: 5%;
+  width: 200px;
+}
+
+.nest-2{
+  bottom: 5%;
+  left: 5%;
+  width: 160px;
+}
+
+.nest-3{
+  top: 50%;
+  left: 10%;
+  width: 140px;
+}
+
+/* Make sure sections allow positioning */
+.hero,
+.section,
+.contact{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Keep content above */
+.container{
+  position: relative;
+  z-index: 2;
 }
