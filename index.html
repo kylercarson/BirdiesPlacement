@@ -65,8 +65,8 @@
         <div class="hero-card" role="region" aria-label="Quick contact">
           <h2>Get help today</h2>
           <p class="muted">Tell us what you need. We’ll respond within 1 business day—often sooner.</p>
-
-          <form class="form" action="#" method="post">
+          <form class="form" action="https://formspree.io/f/xqeynyqb" method="POST">
+            <input type="hidden" name="_subject" value="Birdies Hero Form Submission">
             <label>
               <span>Full name</span>
               <input type="text" name="name" placeholder="Jane Doe" required />
@@ -74,7 +74,7 @@
 
             <label>
               <span>Phone</span>
-              <input type="tel" name="phone" placeholder="(806) 252-8877)" required />
+              <input type="tel" name="phone" placeholder="(806) 252-8877" required />
             </label>
 
             <label>
@@ -328,7 +328,9 @@
 
         <div class="card contact-form">
           <h3>Send a message</h3>
-          <form class="form" action="#" method="post">
+
+          <form class="form" action="https://formspree.io/f/xqeynyqb" method="POST">
+            <input type="hidden" name="_subject" value="Birdie's Contact Form Submission">
             <div class="row">
               <label>
                 <span>Name</span>
@@ -342,7 +344,7 @@
 
             <label>
               <span>Email</span>
-              <input type="email" name="email" placeholder="you@email.com" />
+              <input type="email" name="_replyto" required placeholder="you@email.com" />
             </label>
 
             <label>
