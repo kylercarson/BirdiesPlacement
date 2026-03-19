@@ -658,6 +658,10 @@ input:focus, select:focus, textarea:focus{
   .hero{ padding-top:54px; }
   .hero-feather{ width:85px; top:66px; left:-8px; }
   .hero-nest{ width:120px; top:150px; }
+  html{
+    scroll-padding-top: 100px;
+  }
+  
 }
 
 /* BACKGROUND ART SYSTEM */
