@@ -822,3 +822,13 @@ details[open] summary::after { content: '−'; }
 .form-status[data-state="error"] { color: #9c2323; }
 .form-status[data-state="success"] { color: #245b36; }
 button:disabled { opacity: .65; cursor: wait; }
+
+/* Small interactive transitions complement the scroll reveals. */
+@media (prefers-reduced-motion: no-preference) {
+  .btn { transition: transform .2s ease, box-shadow .2s ease, background-color .2s ease; }
+  .btn:hover { transform: translateY(-2px); box-shadow: 0 12px 26px rgba(68,89,121,.22); }
+  .btn:active { transform: translateY(0); }
+  .service-link { transition: transform .25s ease, box-shadow .25s ease; }
+  .service-link:hover { transform: translateY(-4px); }
+  .menu a { transition: background-color .2s ease, color .2s ease; }
+}

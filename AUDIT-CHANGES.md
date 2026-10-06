@@ -64,3 +64,7 @@ Added a JavaScript Formspree submission handler using POST FormData and an appli
 ## Checklist navigation
 
 Added a Touring Checklist link to the primary navigation on all 13 public content pages, including the 404 page. The checklist page identifies the link as the current page for assistive technology. Local link checks passed.
+
+## Scroll transitions
+
+Added section slide/fade reveals and staggered card transitions using IntersectionObserver and native Web Animations. Initial viewport content stays immediately visible. Elements reveal once; animations do not alter layout. Unsupported browsers and disabled JavaScript keep content visible. Reduced-motion preferences disable/cancel reveals, and focusing animated content cancels its movement. Added subtle button, service-card and navigation hover transitions. Versioned CSS/JS URLs force refresh. Included the separately delivered blue nest favicon. Mocked tests passed for initial visibility, below-fold observation/reveal and reduced-motion cancellation; form regression scenarios also passed. Real browser visual checking remains outstanding.
