@@ -52,3 +52,7 @@ Reviewed against the supplied audit on October 6, 2026. Source: repository main,
 ## Structure
 
 Existing root CSS, images, homepage and owners URLs are retained to reduce deployment disruption. New care, guide, legal and referral pages use `folder/index.html`. `assets/site.js` holds shared behavior; `scripts/check_site.py` verifies the output. Legacy files remain unchanged and are excluded in robots.txt. These are plain static files: no build system is required. Repeated header/footer/schema blocks must be kept synchronized when editing pages.
+
+## Requested revision
+
+Restored the first delivered ZIP as the baseline. Changed the favicon and Apple touch icon to the existing basket-of-eggs artwork. Added 15 matching Call Sarah buttons immediately after Call Tricia buttons, with identical styling. Static link/metadata checks, JavaScript syntax and whitespace checks passed; each Tricia call button was checked for its adjacent Sarah call button.
