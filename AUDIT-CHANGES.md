@@ -56,3 +56,11 @@ Existing root CSS, images, homepage and owners URLs are retained to reduce deplo
 ## Requested revision
 
 Restored the first delivered ZIP as the baseline. Changed the favicon and Apple touch icon to the existing basket-of-eggs artwork. Added 15 matching Call Sarah buttons immediately after Call Tricia buttons, with identical styling. Static link/metadata checks, JavaScript syntax and whitespace checks passed; each Tricia call button was checked for its adjacent Sarah call button.
+
+## Inline contact form
+
+Added a JavaScript Formspree submission handler using POST FormData and an application/json response. Visitors stay on the same page. An accessible live message reports progress, confirmed success, or failure. Only a successful response clears the form; errors preserve entries. The submit button is disabled during the request and duplicate requests are prevented. Script and stylesheet URLs are versioned for this update. Native form submission remains available when JavaScript is unavailable. Mocked checks passed for success, server failure, network failure, input preservation and duplicate prevention. No real inquiry was sent; inbox delivery must still be checked with the Formspree account.
+
+## Checklist navigation
+
+Added a Touring Checklist link to the primary navigation on all 13 public content pages, including the 404 page. The checklist page identifies the link as the current page for assistive technology. Local link checks passed.

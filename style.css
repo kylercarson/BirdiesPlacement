@@ -816,3 +816,9 @@ details[open] summary::after { content: '−'; }
  html { scroll-behavior: auto; }
  .service-link { transition: none; }
 }
+
+.form-status { margin: 0; font-weight: 600; }
+.form-status:empty { display: none; }
+.form-status[data-state="error"] { color: #9c2323; }
+.form-status[data-state="success"] { color: #245b36; }
+button:disabled { opacity: .65; cursor: wait; }

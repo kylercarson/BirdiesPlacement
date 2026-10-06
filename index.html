@@ -29,7 +29,7 @@
 <a href="/#faq">FAQ</a>
 <a href="/#contact">Free Consultation</a>
 <a href="/meet-the-owners/">Meet the Owners</a>
-</nav>
+<a href="/guides/touring-checklist/">Touring Checklist</a></nav>
 </div>
 </div></header>
 <!-- LIGHT TOOLBAR -->
@@ -227,7 +227,7 @@
 </div>
 <div class="card contact-form branded-card">
 <h3>Send a message</h3>
-<form action="https://formspree.io/f/xqeynyqb" class="form" method="POST">
+<form action="https://formspree.io/f/xqeynyqb" class="form" id="contact-form" method="POST">
 <input name="_subject" type="hidden" value="Birdie's Contact Form Submission"/>
 <div class="row">
 <label>
@@ -248,7 +248,7 @@
 <textarea maxlength="3000" name="message" placeholder="Share your general questions, preferred location, and timeline. Please do not include medical records or sensitive health details." rows="5"></textarea>
 </label>
 <p class="form-note">By submitting, you ask Birdie’s to contact you about your inquiry. See our <a href="/privacy/">Privacy Policy</a>. Please share only general information; do not submit medical records, Social Security numbers, or insurance numbers. For urgent placement questions, call directly.</p><button class="btn btn-full" type="submit">Submit</button>
-</form>
+<p aria-atomic="true" aria-live="polite" class="form-status" id="form-status" role="status"></p></form>
 </div>
 </div>
 </section>
@@ -288,5 +288,5 @@
 </div>
 </div>
 </footer>
-<script defer="" src="/assets/site.js"></script></body>
+<script defer="" src="/assets/site.js?v=inline-form-20261006"></script></body>
 </html>
