@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /Legacy/
+Sitemap: https://birdiesplacement.com/sitemap.xml

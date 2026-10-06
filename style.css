@@ -782,3 +782,37 @@ html{
     max-width: 520px;
   }
 }
+/* Readability, keyboard access, and shared content pages. */
+:root { --muted: #555d6c; }
+img { height: auto; }
+body { line-height: 1.65; }
+button, input, textarea { font-size: 16px; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid #445979; outline-offset: 4px; }
+.footer :focus-visible { outline-color: #fff; }
+.service-link { display: block; transition: box-shadow .2s ease; }
+.service-link:hover { text-decoration: none; box-shadow: 0 12px 30px rgba(31,36,48,.16); }
+.service-link span { color: var(--brand); font-weight: 700; text-decoration: underline; }
+.prose { max-width: 850px; }
+.prose h2 { font-family: var(--serif); font-size: 32px; color: var(--brand); margin-top: 32px; }
+.prose a:not(.btn), .form-note a { text-decoration: underline; }
+.form-note { font-size: 13px; color: var(--muted); }
+.owners-preview { display: grid; grid-template-columns: 190px 1fr; gap: 28px; margin-top: 28px; align-items: center; }
+.owners-preview img { border-radius: 16px; width: 190px; }
+details summary { display: flex; justify-content: space-between; gap: 16px; }
+details summary::after { content: '+'; flex-shrink: 0; }
+details[open] summary::after { content: '−'; }
+.contact::after { background-image: url('/images/birdies-nest.webp'); }
+@media (max-width: 600px) {
+ .menu { gap: 4px; justify-content: center; font-size: 13px; }
+ .menu a { min-height: 44px; display: inline-flex; align-items: center; }
+ .brand-logo { width: 280px; }
+ .owners-preview { grid-template-columns: 1fr; }
+ .owners-preview img { width: 100%; max-width: 280px; margin-inline: auto; }
+ .hero-actions .btn { width: 100%; }
+ .header-bottom { position: static; }
+}
+@media (prefers-reduced-motion: reduce) {
+ html { scroll-behavior: auto; }
+ .service-link { transition: none; }
+}

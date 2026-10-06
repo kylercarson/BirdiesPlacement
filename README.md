@@ -1,32 +1,31 @@
-# BirdiesPlacement
+# Birdie's Senior Living Solutions
 
-This repository contains the website for Birdies Placement, a senior living and hospice placement service.
+Static website for senior living referral and placement guidance in Lubbock and surrounding areas. Designed for GitHub Pages at **https://birdiesplacement.com/**.
 
-## Hosting on GitHub Pages with Custom Domain
+## Preview and validate
 
-This site is designed to be hosted on GitHub Pages with a custom domain (birdiesplacement.com).
+From the repository root:
 
-### Setup Steps:
+```sh
+python3 -m http.server 8000
+python3 scripts/check_site.py
+node --check assets/site.js
+```
 
-1. **Repository Settings:**
-   - Go to your repository settings on GitHub
-   - Scroll down to "Pages" in the left sidebar
-   - Under "Source", select "Deploy from a branch"
-   - Choose the "main" branch and "/ (root)" folder
-   - In the "Custom domain" field, enter: `birdiesplacement.com`
-   - Click "Save"
+Visit `http://localhost:8000/`. Use a web server rather than opening files directly, because links intentionally start at the domain root.
 
-2. **DNS Configuration:**
-   - In your domain registrar's DNS settings, add a CNAME record:
-     - Name: `www` (or `@` for apex domain)
-     - Value: `kylercarson.github.io`
-   - If using the apex domain (birdiesplacement.com), you may need an A record pointing to GitHub's IP addresses instead.
+## Deploy
 
-3. **SSL Certificate:**
-   - GitHub Pages will automatically provision an SSL certificate for your custom domain.
+Keep `index.html`, `style.css`, `CNAME`, `.nojekyll`, `404.html`, `robots.txt`, `sitemap.xml`, and all page/asset folders in the repository root. Replace the files with this updated version, commit, and push to your chosen Pages branch. Keep the existing custom-domain settings. This package has not been pushed or deployed automatically.
 
-Your site will be available at `https://birdiesplacement.com/`
+Directory URLs such as `/memory-care-lubbock/` resolve to their `index.html`. The old `/meet-the-owners.html` file preserves its existing canonical and browser redirect; it is not an HTTP 301. The custom domain is expected: root-relative paths do not support a GitHub project URL with a `/BirdiesPlacement/` prefix.
 
-## Local Development
+## Maintenance
 
-To view the site locally, open `index.html` in your web browser.
+- Review `AUDIT-CHANGES.md` for implemented fixes, limitations and owner follow-up.
+- Edit shared colors/layout in `style.css` and shared behavior in `assets/site.js`.
+- Analytics is disabled until a real measurement ID and privacy/consent configuration are provided.
+- Keep titles, descriptions, canonical/social tags, structured data and sitemap consistent when adding pages.
+- Keep headers, footers, business contact details and JSON-LD synchronized across static pages.
+- Original PNG images remain as source assets; public pages use smaller WebP versions.
+- Existing owner bios and phone numbers are retained. No testimonials, credentials or price estimates have been invented.
